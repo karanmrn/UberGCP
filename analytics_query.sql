@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE `uberproject-398217.Uber_data_eng.tbl_analytics` AS (
+CREATE OR REPLACE TABLE 'uberproject-398217.Uber_data_eng.tbl_analytics' AS (
 SELECT 
 f.trip_id
 f.VendorID,
@@ -21,12 +21,12 @@ f.improvement_surcharge,
 f.total_amount
 FROM 
 
-`data-with-karan.uber_data_engineering_yt.fact_table` f
-JOIN `uberproject-398217.Uber_data_eng.datetime_dim` d  ON f.datetime_id=d.datetime_id
-JOIN `uberproject-398217.Uber_data_eng.passenger_count_dim` p  ON p.passenger_count_id=f.passenger_count_id  
-JOIN `uberproject-398217.Uber_data_eng.trip_distance_dim` t  ON t.trip_distance_id=f.trip_distance_id  
-JOIN `uberproject-398217.Uber_data_eng.rate_code_dim` r ON r.rate_code_id=f.rate_code_id  
-JOIN `uberproject-398217.Uber_data_eng.pickup_location_dim` pick ON pick.pickup_location_id=f.pickup_location_id
-JOIN `uberproject-398217.Uber_data_eng.dropoff_location_dim` drop ON drop.dropoff_location_id=f.dropoff_location_id
-JOIN `uberproject-398217.Uber_data_eng.payment_type_dim` pay ON pay.payment_type_id=f.payment_type_id)
+'data-with-karan.uber_data_engineering_yt.fact_table' f
+JOIN 'uberproject-398217.Uber_data_eng.datetime_dim' d  ON f.datetime_id=d.datetime_id
+JOIN 'uberproject-398217.Uber_data_eng.passenger_count_dim' p  ON p.passenger_count_id=f.passenger_count_id  
+JOIN 'uberproject-398217.Uber_data_eng.trip_distance_dim' t  ON t.trip_distance_id=f.trip_distance_id  
+JOIN 'uberproject-398217.Uber_data_eng.rate_code_dim' r ON r.rate_code_id=f.rate_code_id  
+JOIN 'uberproject-398217.Uber_data_eng.pickup_location_dim' pick ON pick.pickup_location_id=f.pickup_location_id
+JOIN 'uberproject-398217.Uber_data_eng.dropoff_location_dim' drop ON drop.dropoff_location_id=f.dropoff_location_id
+JOIN 'uberproject-398217.Uber_data_eng.payment_type_dim' pay ON pay.payment_type_id=f.payment_type_id)
 ;
